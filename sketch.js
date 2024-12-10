@@ -12,14 +12,11 @@ function setup() {
 function draw() {
   let sliderVal = slider.value();
   background(10);
-  push();
   fill(circleColours[index]);
   circle(sliderVal, sliderVal, 50);
-  pop();
-  push();
-  fill('blue');
-  circle(350 - sliderVal, sliderVal, 50);
-  pop();
+  circle(400 - sliderVal, sliderVal, 50);
+  circle(sliderVal, height/2, 50);
+  circle(width/2,sliderVal, 50);
 }
 
 function mousePressed(){
